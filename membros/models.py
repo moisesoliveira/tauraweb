@@ -9,6 +9,7 @@ class Membro(AbstractUser):
     #    nome = models.CharField(max_length=250)
     #    email = models.EmailField()
 #    matricula = models.PositiveIntegerField()
+    area_de_atuacao = models.CharField(max_length=250)
 
     def __str__(self):
         return self.username

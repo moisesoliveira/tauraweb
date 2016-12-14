@@ -7,7 +7,7 @@ from membros.models import Membro
 
 class CriaMembro(CreateView):
     model = Membro
-    fields = ['first_name', 'last_name', 'email', 'username', 'password']
+    fields = ['first_name', 'last_name', 'email', 'username', 'password', 'area_de_atuacao']
     template_name = 'criar-membro.html'
     success_url = '.'
 
