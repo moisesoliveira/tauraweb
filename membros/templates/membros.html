@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Autores</title>
+</head>
+<body>
+
+{% for membro in membros %}
+    <p><a href="{% url 'membro' membro.pk %}">{{ membro.first_name }}</a></p>
+{% endfor membros %}
+
+<a href="{% url 'criar_membro' %}">Cria membro</a>
+</body>
+</html>
