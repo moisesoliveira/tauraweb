@@ -8,7 +8,7 @@ from django.contrib.auth.decorators import login_required
 class Membro(AbstractUser):
     #    nome = models.CharField(max_length=250)
     #    email = models.EmailField()
-    matricula = models.PositiveIntegerField()
+#    matricula = models.PositiveIntegerField()
 
     def __str__(self):
         return self.username
