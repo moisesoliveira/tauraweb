@@ -1,5 +1,4 @@
 from django.conf.urls import url
-
 from membros import views
 from membros.views import CriaMembro, membro
 from views import logar, sair

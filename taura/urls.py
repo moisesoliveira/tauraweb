@@ -17,6 +17,9 @@ from django.conf.urls import include, url
 from django.contrib import admin
 from django.contrib.auth import views
 from membros.views import logar, sair
+from noticias.views import Criarnoticia
+from django.views.generic.base import TemplateView
+
 
 
 
@@ -29,5 +32,6 @@ urlpatterns = [
     url(r'^membros/', include('membros.urls')),  # /livros/**
     url(r'^login/$', logar, name='login'),
     url(r'^logout/$', sair, name='logout'),
-
+    url(r'^noticias/', include('noticias.urls')),
+    url(r'^', TemplateView.as_view(template_name='index.html')),
 ]

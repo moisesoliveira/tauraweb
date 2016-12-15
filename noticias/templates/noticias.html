@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Noticias</title>
+</head>
+<body>
+
+{% for noticia in noticias%}
+    <p><a href="{% url 'noticia' noticia.pk %}">{{ noticia.titulo }}</a></p>
+{% endfor noticias %}
+<a href="{% url 'criar_noticia' %}">Cria Noticia</a>
+
+</body>
+</html>
