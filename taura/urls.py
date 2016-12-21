@@ -28,10 +28,10 @@ urlpatterns = [
 #    url(r'^$', TemplateView.as_view(template_name="index.html")),
     url(r'^admin/', include(admin.site.urls)),
     url(r'^CriaUsuario/', include('membros.urls')),
-    url(r'^membros/', include('membros.urls')),  # /livros/**
+    url(r'^membros/', include('membros.urls')),
     url(r'^noticias/', include('noticias.urls')),
     url(r'^projetos/', include('projetos.urls')),
     url(r'^login/$', logar, name='login'),
     url(r'^logout/$', sair, name='logout'),
-    url(r'^', TemplateView.as_view(template_name='index.html')),
+    url(r'^', TemplateView.as_view(template_name='index.html'), name = 'index'),
 ]

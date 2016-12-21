@@ -7,15 +7,11 @@
 
 
 <form action="{% url 'login' %}" method="post"> {% csrf_token %}
-<label for="id_username">Usuárioo: </label>
+<label for="id_username">Usuário: </label>
    	<input id="id_username" type="text" name="username">
    	<label for="id_senha">Senha: </label>
    	<input id="id_senha" type="password" name="password">
    	<input type="submit" value="Logar">
 </form>
-
-
-
-
 </body>
 </html>

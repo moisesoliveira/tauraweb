@@ -39,7 +39,7 @@ def logar(request):
         user = authenticate(username=username, password=password)
         if user is not None:
             login(request, user) # Salva o usuario na session atual
-            return redirect("membros")
+            return redirect("index")
         else:
             return render(request, 'login.html')
     else: # GET apenas carrega a pagina
