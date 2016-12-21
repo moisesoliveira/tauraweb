@@ -33,5 +33,5 @@ urlpatterns = [
     url(r'^login/$', logar, name='login'),
     url(r'^logout/$', sair, name='logout'),
     url(r'^noticias/', include('noticias.urls')),
-#    url(r'^', TemplateView.as_view(template_name='index.html')),
+    url(r'^', TemplateView.as_view(template_name='index.html')),
 ]
