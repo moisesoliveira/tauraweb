@@ -25,7 +25,8 @@ from django.views.generic.base import TemplateView
 
 urlpatterns = [
     # Pagina inicial usando TemplateView (chama o HTML diretamente sem precisar de funcao ou classe na views.py)
-#    url(r'^$', TemplateView.as_view(template_name="index.html")),
+#   url(r'^$', TemplateView.as_view(template_name="index.html")),
+
     url(r'^admin/', include(admin.site.urls)),
     url(r'^CriaUsuario/', include('membros.urls')),
     url(r'^membros/', include('membros.urls')),
