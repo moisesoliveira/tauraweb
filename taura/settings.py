@@ -41,6 +41,7 @@ INSTALLED_APPS = (
     'membros',
     'eventos',
     'noticias',
+
 )
 
 MIDDLEWARE_CLASSES = (
