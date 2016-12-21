@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Projeto</title>
+</head>
+<body>
+<p>{{ projeto.titulo}}</p>
+<p>{{ projeto.descricao}}</p>
+<p>{{ projeto.responsavel}}</p>
+<p><a href="{% url 'excluir_projeto' projeto.pk %}">Excluir</a></p>
+
+
+
+</body>
+</html>
