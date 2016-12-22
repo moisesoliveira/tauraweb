@@ -5,19 +5,24 @@ from django.contrib.auth import authenticate, login
 from django.views.generic import CreateView, UpdateView
 from membros.models import Membro
 
+
+#criacao de membro
 class CriaMembro(CreateView):
     model = Membro
     fields = ['first_name', 'last_name', 'email', 'username', 'password', 'area_de_atuacao']
     template_name = 'criar-membro.html'
     success_url = '.'
 
- #Adiciona um password criptografado para o usuario
-    def form_valid(self, form):
-        usuario = form.save(commit=False)
-        usuario.set_password(form.cleaned_data['password'])
-        usuario.save()
-        return super(CriaMembro, self).form_valid(form)
+#Adiciona um password criptografado para o usuario
+def form_valid(self, form):
+    usuario = form.save(commit=False)
+    usuario.set_password(form.cleaned_data['password'])
+    usuario.save()
+    return super(CriaMembro, self).form_valid(form)
 
+
+
+#Lista os membros no bamco de dados puxa todos os membros do banco de dados
 def membros(request):
     membros = Membro.objects.all()
     return render(request, 'membros.html', {'membros': membros})
@@ -26,7 +31,7 @@ def membro(request, id=None):
     membro = get_object_or_404(Membro, id=id)
     return render(request, 'membro.html', {'membro': membro})
 
-@login_required
+@login_required #verifica, login se estiver logado pode excluir
 def excluir(request, id=None):
     membro = get_object_or_404(Membro, id=id)
     membro.delete()

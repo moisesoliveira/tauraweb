@@ -6,6 +6,7 @@ from django.shortcuts import render, get_object_or_404, redirect
 from django.contrib.auth.decorators import login_required
 
 
+#define o formulario da noticia
 class Criarnoticia(CreateView):
     model = Noticia
     fields = ['titulo','texto']

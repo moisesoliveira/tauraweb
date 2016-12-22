@@ -6,12 +6,15 @@ from django.shortcuts import render, get_object_or_404, redirect
 from django.contrib.auth.decorators import login_required
 
 
+
+#define o formulario
 class IncluirProjeto(CreateView):
     model = Projeto
     fields = ['titulo','descricao','responsavel']
     template_name = 'inclur-projeto.html'
     success_url = '.'
 
+#lista os projetos incluidos
 def projetos(request):
     projetos = Projeto.objects.all()
     return render(request, 'projetos.html', {'projetos': projetos})
