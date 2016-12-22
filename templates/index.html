@@ -7,7 +7,13 @@
 <head>
     <title>home</title>
 
-    {################################### COPIAR PARA TODO O HTML ################################################}
+<!-- adicionando bibliotecas de estilo-->
+    {% load staticfiles %}
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="{% static 'css/blog.css' %}">
+
+        {################################### COPIAR PARA TODO O HTML ################################################}
     {#referência:#}
     {#http://webdevacademy.com.br/tutoriais/bootstrap-3-como-comecar/#}
 
@@ -38,12 +44,13 @@
 </head>
 
 <body>
-
-
-
 <div>
-    <h1><a href="https://www.facebook.com/Taurabots/?fref=ts" class="btn btn-lg btn-primary">facebook</a></span></h1>
+    <h1>
+        <a href="https://www.facebook.com/Taurabots/?fref=ts" class="btn btn-lg btn-primary" style = "margin-left:30px" >facebook</a></span>
+        <button onclick = 'window.location.href ="/login/"' class="btn btn-lg btn-primary"style = "margin-left:1250px">Login</button>
 
+
+    </h1>
 </div>
 
 <div class="row" style = "margin-top: 100px">
@@ -52,9 +59,10 @@
 
 <div class="btn-group" style="margin-top: 150px">
 
-    <button onclick = 'window.location.href = "/membros/"' class="btn btn-lg btn-primary" style = "margin-left:600px ">Membros </button>
+    <button onclick = 'window.location.href = "/membros/"' class="btn btn-lg btn-primary" style = "margin-left:600px">Membros </button>
     <button onclick = 'window.location.href = "/projetos/"' class="btn btn-lg btn-primary" >Projetos </button>
     <button onclick = 'window.location.href ="/noticias/"' class="btn btn-lg btn-primary">Noticias</button>
+
 
 </div>
 
